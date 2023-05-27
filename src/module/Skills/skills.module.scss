@@ -1,0 +1,136 @@
+.interest {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  
+    .left {
+      width: 75%;
+  
+      .leftWrapper {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .iconWrapper {
+          display: grid;
+          place-items: center;
+  
+          .icon {
+            height: 4rem;
+            width: 4rem;
+            color: #74d7ff;
+          }
+        }
+        .role {
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+          font-size: 1.5rem;
+        }
+
+        .input{
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .tags{
+          display: flex;
+          gap: 10px;
+          width: 20rem;
+          flex-wrap: wrap;
+          .tag{
+            .tag2{
+              height: 3rem;
+              width: 100%;
+              margin: auto;
+              font-size: 1rem;
+              border-radius: 15px;
+              padding-top: 13px;
+              padding-left: 10px;
+            }
+          }
+        }
+
+        .skillsBox{
+          margin-top: 1rem;
+          color: #727272;
+        }
+        
+  
+        .interestWrapper {
+          display: flex;
+          flex-direction: column;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          gap: 1rem;
+          border: 1px solid #e6e6e6;
+          border-radius: 10px;
+          padding: 2rem;
+  
+          .label {
+            font-size: 1rem;
+            font-weight: 700;
+          }
+          .value {
+            color: #727272;
+            padding-left: 1.7rem;
+          }
+        }
+        .div {
+          margin-top: 2rem;
+          border-bottom: 1px solid #e6e6e6;
+        }
+        .buttonWrap {
+          margin-top: 2rem;
+          display: flex;
+          justify-content: flex-end;
+          gap: 2rem;
+          .button {
+            border-radius: 15px;
+            width: 7rem;
+            height: 2.6rem;
+            color: #000;
+          }
+          .skills {
+            @extend .button;
+            background-color: #1c2b33;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .right {
+      width: 25%;
+      height: 100vh;
+      background-color: #0f1218;
+      .rightWrap {
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  
+        .avatar {
+          width: 12rem;
+          height: 12rem;
+        }
+        .profile {
+          margin-top: 2rem;
+          color: #ffffff;
+          font-size: 1rem;
+          font-weight: 900;
+        }
+        .role{
+          margin-top: 1rem;
+          color: rgba(255, 255, 255, 0.34);
+        }
+        .about{
+          width: 70%;
+          margin-top: 4rem;
+          color: #ffffff;
+          font-size: 1.4rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,31 @@
+.cardWrapper {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 0px !important;
+    position: relative;
+    .headerWrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #f0f0f0;
+      padding: 0.5rem;
+    }
+  }
+  .pointer {
+    cursor: pointer;
+  }
+  .footerWrapper {
+    padding: 0.5rem;
+    width: 100%;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  .bodyWrapper {
+    padding: 0.5rem;
+  }
+  
+  .loader {
+    width: 100%;
+    position: relative;
+  }
+  
