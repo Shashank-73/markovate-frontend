@@ -8,10 +8,13 @@ import avatar from "../../assets/Ellipse 2.png";
 import skillsStyles from "./skills.module.scss";
 import { useState } from "react";
 import { ROUTES } from "../../common/routes/routes.constants";
+import { useRecoilValue } from "recoil";
+import { AtomAuthUser } from "../../store/Auth/auth.slice";
 
 const Skills = () => {
   const [tags, setTags] = useState<any>([]);
   const [value, setValue] = useState("");
+  const user = useRecoilValue(AtomAuthUser)
 
   const navigate = useNavigate();
 
@@ -102,7 +105,7 @@ const Skills = () => {
       <div className={skillsStyles.right}>
         <div className={skillsStyles.rightWrap}>
           <Avatar src={avatar} className={skillsStyles.avatar} />
-          <div className={skillsStyles.profile}>Edward Pascual, PSM</div>
+          <div className={skillsStyles.profile}>{user.name} {user.companyName}</div>
           <div className={skillsStyles.role}>
             Project Manager at Trapeze Group
           </div>

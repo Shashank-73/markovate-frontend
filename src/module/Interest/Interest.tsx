@@ -14,6 +14,7 @@ import { ROUTES } from "../../common/routes/routes.constants";
 const Interest = () => {
   const [user, setUser] = useRecoilState(AtomAuthUser);
   const [interestValue, setInterestValue] = useState(user.interest);
+  console.log(user);
 
   const navigate = useNavigate();
   const interests = [
@@ -39,14 +40,17 @@ const Interest = () => {
     try {
       navigate(ROUTES.SKILLS);
       const token = localStorage.getItem("AT");
-      const user = await fetch("https://markovate-backend-srqo.vercel.app/interest", {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-          authorization: `${token}`,
-        },
-        body: JSON.stringify(interestValue),
-      });
+      const user = await fetch(
+        "https://markovate-backend-srqo.vercel.app/interest",
+        {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `${token}`,
+          },
+          body: JSON.stringify(interestValue),
+        }
+      );
       const userData = await user.json();
       setUser(userData);
     } catch (err) {
@@ -105,7 +109,7 @@ const Interest = () => {
       <div className={interestStyles.right}>
         <div className={interestStyles.rightWrap}>
           <Avatar src={avatar} className={interestStyles.avatar} />
-          <div className={interestStyles.profile}>Edward Pascual, PSM</div>
+          <div className={interestStyles.profile}>{user.name} {user.companyName}</div>
           <div className={interestStyles.role}>
             Project Manager at Trapeze Group
           </div>
