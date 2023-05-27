@@ -1,7 +1,9 @@
 export interface AuthUserDTO{
     userId: string;
     email: string;
-    interest: "Engineering"
+    interest: string;
+    name: string;
+    companyName: string;
   }
 
   export interface UserDTO{
