@@ -16,7 +16,7 @@ const AuthProvider = (props: Props) => {
     const fetchUser = async () => {
       try {
         const token = localStorage.getItem("AT");
-        const user = await fetch("http://localhost:4000/user", {
+        const user = await fetch("https://markovate-backend-kappa.vercel.app/user", {
           headers: {
             "Content-Type": "application/json",
             authorization: `${token}`,

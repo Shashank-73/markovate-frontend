@@ -13,7 +13,7 @@ const AuthLayout = () => {
     const fetchUser = async () => {
       try {
         const token = localStorage.getItem("AT");
-        const user = await fetch("http://localhost:4000/user", {
+        const user = await fetch("https://markovate-backend-aqr7b7cc1-shashank-73.vercel.app/user", {
           headers: {
             "Content-Type": "application/json",
             authorization: `${token}`,

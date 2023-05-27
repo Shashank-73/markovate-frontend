@@ -28,7 +28,7 @@ const SignUp = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch("http://localhost:4000/login", {
+      const res = await fetch("https://markovate-backend-kappa.vercel.app/login", {
         method: "post",
         headers: {
           "Content-Type": "application/json",
@@ -38,7 +38,7 @@ const SignUp = () => {
       const data = await res.json();
       localStorage.setItem("AT", data.accessToken);
 
-      const user = await fetch("http://localhost:4000/user", {
+      const user = await fetch("https://markovate-backend-kappa.vercel.app/user", {
         headers: {
           "Content-Type": "application/json",
           authorization: `${data.accessToken}`,
