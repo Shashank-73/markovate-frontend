@@ -12,7 +12,7 @@ const Skills = () => {
   const [tags, setTags] = useState<any>([]);
   const [value, setValue] = useState("");
 
-  const [initial, setInitial] = useState([
+  const [initial, _] = useState([
     "React",
     "HTML",
     "Node.js",
