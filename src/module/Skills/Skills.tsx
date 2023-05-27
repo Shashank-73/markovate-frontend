@@ -1,17 +1,21 @@
 import { Tag, Avatar } from "antd";
 
+import { useNavigate } from "react-router-dom";
 import { PzButton, PzInput } from "../../components/index";
 
 import avatar from "../../assets/Ellipse 2.png";
 
 import skillsStyles from "./skills.module.scss";
 import { useState } from "react";
+import { ROUTES } from "../../common/routes/routes.constants";
 
 const Skills = () => {
   const [tags, setTags] = useState<any>([]);
   const [value, setValue] = useState("");
 
-  const [initial,] = useState([
+  const navigate = useNavigate();
+
+  const [initial] = useState([
     "React",
     "HTML",
     "Node.js",
@@ -81,7 +85,11 @@ const Skills = () => {
             </div>
             <div className={skillsStyles.div}></div>
             <div className={skillsStyles.buttonWrap}>
-              <PzButton className={skillsStyles.button} type="default">
+              <PzButton
+                className={skillsStyles.button}
+                type="default"
+                onClick={() => navigate(ROUTES.INTEREST)}
+              >
                 Back
               </PzButton>
               <PzButton className={skillsStyles.skills} type="ghost">

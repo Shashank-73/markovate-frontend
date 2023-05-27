@@ -82,7 +82,7 @@ const SignUp = () => {
 
   const handleSignup = async () => {
     try {
-      const res = await fetch("http://localhost:4000/signup", {
+      const res = await fetch("https://markovate-backend-srqo.vercel.app/signup", {
         method: "post",
         headers: {
           "Content-Type": "application/json",
@@ -92,7 +92,7 @@ const SignUp = () => {
       const data = await res.json();
       localStorage.setItem("AT", data.accessToken);
 
-      const user = await fetch("http://localhost:4000/user", {
+      const user = await fetch("https://markovate-backend-srqo.vercel.app/user", {
         headers: {
           "Content-Type": "application/json",
           "authorization": `${data.accessToken}`,

@@ -39,7 +39,7 @@ const Interest = () => {
     try {
       navigate(ROUTES.SKILLS);
       const token = localStorage.getItem("AT");
-      const user = await fetch("http://localhost:4000/interest", {
+      const user = await fetch("https://markovate-backend-srqo.vercel.app/interest", {
         method: "post",
         headers: {
           "Content-Type": "application/json",
