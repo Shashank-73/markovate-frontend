@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router";
 import { Tag, Avatar } from "antd";
 
 import { PzButton, PzInput } from "../../components/index";
@@ -33,7 +32,6 @@ const Skills = () => {
   };
 
   // Variables
-  const navigate = useNavigate();
   return (
     <div className={skillsStyles.interest}>
       <div className={skillsStyles.left}>
